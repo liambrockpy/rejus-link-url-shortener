@@ -3,16 +3,30 @@ from config import Config
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from werkzeug import exceptions
-from models import Link
 from forms import LinkForm
 from utils.parse_url import parse_url
 import qrcode
+from hashlib import blake2b
 
 app = Flask(__name__)
 app.config.from_object(Config)
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
+class Link(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    short = db.Column(db.String(6), index=True, unique=True)
+    link_url = db.Column(db.String(120), index=True, unique=True)
+    
+    def set_hash(self, url_str):
+        h = blake2b(digest_size=3)
+        b = url_str.encode(encoding='UTF-8')
+        h.update(b)
+        hash_str = h.hexdigest()
+        self.short = hash_str
+
+    def __repr__(self):
+        return f'<Link {self.link_url} {self.short}>'
 
 # store recent link in global var
 g_link = []
@@ -24,7 +38,7 @@ def index():
         link = Link(link_url=parse_url(form.url.data))
         link.set_hash(parse_url(form.url.data))
         img = qrcode.make(link.link_url)
-        path = './app/static/images'
+        path = './static/images'
         img.save(f'{path}/qrcode-{link.short}.png')
 
         existing = Link.query.filter_by(short=link.short).first()
