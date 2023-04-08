@@ -9,7 +9,7 @@ Built with Flask, rejus.link is a simple URL shortener app with QR code image ge
 
 Running live on [rejus.link](https://rejus.link)
 
-Deployed using gunicorn and nginx on an AWS EC2 instance.
+Deployed using ~~gunicorn and nginx on an AWS EC2 instance~~ [Railway](https://railway.app/) 🚂.
 
 ## Technologies
 
@@ -25,7 +25,6 @@ Deployed using gunicorn and nginx on an AWS EC2 instance.
 - psycopg2-binary
 - PostgreSQL
 - gunicorn
-- nginx
 
 ### Infra
 
