@@ -8,27 +8,27 @@
 		<link
 			rel="apple-touch-icon"
 			sizes="180x180"
-			href="{{ url_for('static', filename='favicon/apple-touch-icon.png') }}"
+			href="{{ url_for('static', filename='favicon/apple-touch-icon.png', _scheme='https') }}"
 		/>
 		<link
 			rel="icon"
 			type="image/png"
 			sizes="32x32"
-			href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}"
+			href="{{ url_for('static', filename='favicon/favicon-32x32.png', _scheme='https') }}"
 		/>
 		<link
 			rel="icon"
 			type="image/png"
 			sizes="16x16"
-			href="{{ url_for('static', filename='favicon/favicon-16x16.png') }}"
+			href="{{ url_for('static', filename='favicon/favicon-16x16.png', _scheme='https') }}"
 		/>
 		<link
 			rel="manifest"
-			href="{{ url_for('static', filename='favicon/site.webmanifest') }}"
+			href="{{ url_for('static', filename='favicon/site.webmanifest', _scheme='https') }}"
 		/>
 		<link
 			rel="stylesheet"
-			href="{{ url_for('static', filename='styles/style.css') }}"
+			href="{{ url_for('static', filename='styles/style.css', _scheme='https') }}"
 		/>
 		<title>Rejus.link | URL Shortener</title>
 	</head>

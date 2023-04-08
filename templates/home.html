@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% block head %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='/styles/homepage.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/styles/homepage.css', _scheme='https') }}">
     <script defer src="https://unpkg.com/@popperjs/core@2"></script>
-    <script defer src="{{url_for('static', filename='/js/history.js')}}"></script>
-    <script defer src="{{url_for('static', filename='/js/script.js')}}"></script>
+    <script defer src="{{url_for('static', filename='/js/history.js', _scheme='https')}}"></script>
+    <script defer src="{{url_for('static', filename='/js/script.js', _scheme='https')}}"></script>
 {% endblock head %}
 {% block content %}
     <div class="home-modal">
