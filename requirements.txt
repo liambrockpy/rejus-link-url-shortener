@@ -17,5 +17,5 @@ python-dotenv==1.0.0
 qrcode==7.4.2
 SQLAlchemy==2.0.9
 typing_extensions==4.5.0
-Werkzeug==2.2.3
+Werkzeug==2.3.4
 WTForms==3.0.1
