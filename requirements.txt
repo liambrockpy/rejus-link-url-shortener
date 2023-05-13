@@ -15,7 +15,7 @@ psycopg2-binary==2.9.6
 pypng==0.20220715.0
 python-dotenv==1.0.0
 qrcode==7.4.2
-SQLAlchemy==2.0.9
+SQLAlchemy==2.0.13
 typing_extensions==4.5.0
 Werkzeug==2.2.3
 WTForms==3.0.1
