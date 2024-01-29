@@ -16,6 +16,6 @@ pypng==0.20220715.0
 python-dotenv==1.0.0
 qrcode==7.4.2
 SQLAlchemy==2.0.15
-typing_extensions==4.6.2
+typing_extensions==4.7.1
 Werkzeug==2.3.4
 WTForms==3.0.1
