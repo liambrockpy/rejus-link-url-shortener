@@ -50,3 +50,6 @@ Deployed using ~~gunicorn and nginx on an AWS EC2 instance~~ [Railway](https://r
 
 - Analytics (e.g. clicks on shortened links) - DB table modifications
 - Richer styling including animations
+
+
+  
